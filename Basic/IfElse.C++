@@ -71,4 +71,105 @@ int main(){
     return 0;
 }
 
+
+q3. tell me output of this code
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a = 9;
+
+    if(a == 9){
+        cout<<"Nine ";
+    }
+    if(a>0){
+        cout<<"Positive ";
+    }
+    else if(a<0){
+        cout<<"Negative ";
+    }
+    else{
+        cout<<"Zero ";
+    }
+    return 0;
+}
+
+
+q4. tell me output of this code
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a = 2;
+    int b = a+1;
+
+    if((a=3)==b){
+        cout<<"a is equal to b";
+    }else{
+        cout<<a+1;
+    }
+}
+
+
+
+//q5.tell me output of this code
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a = 24;
+
+    if(a>20){
+        cout<<"I ";
+    }else if(a==24){
+        cout<<"Love ";
+    }else{
+        cout<<"Coding ";
+    }
+}
+
+
+
+//q6. if 
+// 'a' to 'z'->this is lowercase letter
+// 'A' to 'Z'->this is uppercase letter
+// '0' to '9'->this is digit
+// otherwise this is special character
+// input: a
+// output: Lowercase letter
+// input: A
+// output: Uppercase letter
+// input: 5
+// output: Digit
+// input: @
+// output: Special character
+
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    char ch;
+    cout << "Enter a character: ";
+    cin >> ch;
+
+    if(ch>='a' && ch<='z'){
+        cout<<"Lowercase latter";
+    }else if(ch>='A' && ch<='Z'){
+        cout<<"Uppercase latter";
+    }else if(ch>='0' && ch<='9'){
+        cout<<"Digit";
+    }else{
+        cout<<"Special character";  
+    }
+
+    return 0;
+}
+
 */
+
+
