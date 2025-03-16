@@ -27,8 +27,10 @@ public:
 int main() {
     Solution solution;
     int n;
+    
     cout<<"Enter a number: ";  
     cin>>n;
+    
     cout << "The result for " << n << " is: " << solution.subtractProductAndSum(n) << endl;
     return 0;
 }
