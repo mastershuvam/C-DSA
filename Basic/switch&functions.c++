@@ -9,7 +9,7 @@ how many need 1 coin
 
 using switch case
 
-*/
+ans:
 
 
 #include <iostream>
@@ -54,6 +54,42 @@ int main() {
             cout << "1 Rs coin: " << remainingNote / 1 << endl;
             remainingNote %= 1;
     }
+
+    return 0;
+}
+*/
+
+/*
+Function
+q1: calculate power
+*/
+
+#include <iostream>
+using namespace std;
+
+// Function to calculate power (base^exponent)
+int calculatePower(int base, int exponent) {
+    int result = 1;
+
+    for (int i = 1; i <= exponent; i++) {
+        result *= base;
+    }
+
+    return result;
+}
+
+int main() {
+    int base, exponent;
+    
+    cout << "Enter base: ";
+    cin >> base;
+
+    cout << "Enter exponent: ";
+    cin >> exponent;
+
+    int powerResult = calculatePower(base, exponent);
+
+    cout << "Result: " << powerResult << endl;
 
     return 0;
 }
