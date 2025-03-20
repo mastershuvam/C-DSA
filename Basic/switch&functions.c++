@@ -94,9 +94,9 @@ int main() {
     return 0;
 }
 
-*/
 
-//q2. prime no
+
+q2. prime no
 
 #include <iostream>
 using namespace std;
@@ -127,4 +127,44 @@ int main() {
 
     return 0;
 }
+
+
+
+q3. nCr
+
+#include <iostream>
+using namespace std;
+
+// Function to calculate factorial
+int fact(int n) {
+    int ans = 1;
+    for (int i = 1; i <= n; i++) {  
+        ans *= i;
+    }
+    return ans;
+}
+
+// Function to calculate nCr
+int nCr(int n, int r) {
+    // Function calls for factorial calculations
+    return fact(n) / (fact(r) * fact(n - r));  
+}
+
+int main() {
+    int n, r;
+    cout << "Enter n number: ";
+    cin >> n;
+    cout << "Enter r number: ";
+    cin >> r; 
+
+    // Function call to nCr()
+    int Answer = nCr(n, r);  
+    
+    // Output the result
+    cout << "The value of " << n << "C" << r << " is: " << Answer << endl;
+
+    return 0;  
+}
+
+*/
 
