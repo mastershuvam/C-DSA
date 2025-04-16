@@ -1,12 +1,33 @@
 #include <iostream>
+#include <climits>  
 using namespace std;
+
+// Function to find the index of the row with the maximum sum
+void maxSumIndex(int a[3][4]) {
+    int maxSum = INT_MIN;
+    int index = -1;
+
+    for (int i = 0; i < 3; i++) {
+        int sum = 0;
+        for (int j = 0; j < 4; j++) {
+            sum += a[i][j];
+        }
+
+        if (sum > maxSum) {
+            maxSum = sum;
+            index = i;
+        }
+    }
+
+    cout << "Row with maximum sum is: Row " << index + 1 << " with sum " << maxSum << endl;
+}
 
 // Function to print the sum of each row
 void rowSum(int a[3][4]) {
     for (int i = 0; i < 3; i++) {
         int sum = 0;
         for (int j = 0; j < 4; j++) {
-            sum += a[i][j];  // Corrected to add the actual element, not 'i'
+            sum += a[i][j];
         }
         cout << "Sum of row " << i + 1 << " = " << sum << endl;
     }
@@ -25,7 +46,7 @@ bool isFind(int a[3][4], int target) {
 }
 
 int main() {
-    int a[3][4];  // 2D array declaration
+    int a[3][4];
 
     // Input elements row-wise
     cout << "Enter elements row-wise (3 rows x 4 columns):" << endl;
@@ -55,6 +76,10 @@ int main() {
     // Call row sum function
     cout << "\nRow sums:" << endl;
     rowSum(a);
+
+    // Call max row sum index function
+    cout << endl;
+    maxSumIndex(a);
 
     // Search for a target element
     int target;
