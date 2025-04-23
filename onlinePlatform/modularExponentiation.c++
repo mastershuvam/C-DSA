@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// Efficient modular exponentiation
 long long modularExponentiation(long long x, long long n, long long m) {
     long long result = 1;
     x = x % m;
