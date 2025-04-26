@@ -1,3 +1,5 @@
+//link->https://www.naukri.com/code360/problems/modular-exponentiation_1082146
+
 #include <iostream>
 using namespace std;
 
