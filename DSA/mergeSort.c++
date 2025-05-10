@@ -1,3 +1,25 @@
+/*
+...........
+Merge Sort 
+...........
+
+# Description
+
+Merge Sort is a **divide-and-conquer** algorithm that:
+- Divides the array into halves recursively,
+- Sorts each half,
+- Then merges the sorted halves.
+
+Time Complexity:  
+- **Best / Average / Worst Case:** `O(n log n)`  
+- **Space Complexity:** `O(n)` (due to temporary storage used for merging)
+
+---
+
+*/
+
+
+
 #include <iostream>
 #include <vector>
 using namespace std;
