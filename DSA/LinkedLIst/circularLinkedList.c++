@@ -53,10 +53,10 @@ void insertNode(Node* &tail, int element, int d) {
             tail = temp;
     }
 }
-
+//Print Node
 void print(Node* tail) {
     if (tail == NULL) {
-        cout << "List is empty.\n";
+        cout << "List is empty.";
         return;
     }
 
@@ -68,8 +68,28 @@ void print(Node* tail) {
     cout << endl;
 }
 
+//Delete Node
 void deleteNode(Node* &tail, int element){
-    
+    if(tail == NULL){
+        cout<<"list is empty";
+    }else{
+        Node*prev = tail;
+        Node * curr = prev->next;
+        
+        while(curr->data!=element){
+            prev = curr;
+            curr = curr->next;
+        }
+        
+        prev->next = curr->next;
+        if(prev == curr){
+            tail=NULL;
+        }else if(tail == curr){
+            tail = prev;
+        }
+        curr->next = NULL;
+        delete curr;
+    }
 }
 
 int main() {
@@ -77,10 +97,13 @@ int main() {
 
     // initially list is empty
     insertNode(tail, 5, 3);  // insert 3 into empty list
-    insertNode(tail, 3, 5);  // insert 5 after 3
+    
+    /*insertNode(tail, 3, 5);  // insert 5 after 3
     insertNode(tail, 5, 7);  // insert 7 after 5
     insertNode(tail, 7, 9);  // insert 9 after 7
-
+    deleteNode(tail,9);
+    */
+    deleteNode(tail,3);
     print(tail);
 
     return 0;
